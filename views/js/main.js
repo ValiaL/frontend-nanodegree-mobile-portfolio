@@ -504,7 +504,7 @@ function updatePositions() {
 
   var items = document.querySelectorAll('.mover');
   var ScrollPos = document.body.scrollTop / 1250;
-  var sinScrollPos =  Math.sinScrollPos(ScrollPos);
+  var sinScrollPos =  Math.sin(ScrollPos);
   var cosScrollPos = Math.cos(ScrollPos);
   for (var i = 0; i < items.length; i++) {
     //var phase = Math.sin(ScrollPos + (i % 5));
