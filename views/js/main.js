@@ -473,9 +473,12 @@ window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
 var pizzasDiv = document.getElementById("randomPizzas");
-for (var i = 2; i < 100; i++) {
-  pizzasDiv.appendChild(pizzaElementGenerator(i));
-}
+window.requestAnimationFrame(function function_name () {
+  for (var i = 2; i < 100; i++) {
+   pizzasDiv.appendChild(pizzaElementGenerator(i));
+  }
+});
+
 
 // User Timing API again. These measurements tell you how long it took to generate the initial pizzas
 window.performance.mark("mark_end_generating");
