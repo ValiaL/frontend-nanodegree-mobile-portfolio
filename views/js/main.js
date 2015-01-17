@@ -451,12 +451,10 @@ var resizePizzas = function(size) {
   var randomPizzaContainerAll = document.getElementsByClassName("randomPizzaContainer");
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-
-    //var randomPizzaContainerAll = document.querySelectorAll(".randomPizzaContainer");
     var pizzaContainerLength = randomPizzaContainerAll.length;
     var dx = determineDx(randomPizzaContainerAll[0], size);
-    var newwidth = (randomPizzaContainerAll[0].offsetWidth + dx) + 'px';
     for (var i = 0; i < pizzaContainerLength; i++) {
+      var newwidth = (randomPizzaContainerAll[0].offsetWidth + dx) + 'px';
       randomPizzaContainerAll[i].style.width = newwidth;
     }
   }
