@@ -9,7 +9,7 @@ Optimized files can be found on both master branch and gh-pages branch.
 
 ## References
 
-Critical Rendering Path: course https://www.udacity.com/course/ud884
+Critical Rendering Path course : https://www.udacity.com/course/ud884
 
 http://stackoverflow.com/questions/8749225/loading-external-font-in-html-page-with-inline-css
 
