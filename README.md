@@ -2,15 +2,14 @@
 
  Website optimization for the Front-End Nanodegree at Udacity
 
- Optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
+## Demo page
+ http://valial.github.io/frontend-nanodegree-mobile-portfolio/
+ 
+Optimized files can be found on both master branch and gh-pages branch.
 
+## References
 
- You can find the demo page of this project at: http://valial.github.io/frontend-nanodegree-mobile-portfolio/
- Pagespeed test : https://developers.google.com/speed/pagespeed/insights/
-
- Optimized files can be found on both master branch and gh-pages branch.
-
- References:
+Critical Rendering Path course https://www.udacity.com/course/ud884).
 
 http://stackoverflow.com/questions/8749225/loading-external-font-in-html-page-with-inline-css
 
