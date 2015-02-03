@@ -451,6 +451,7 @@ var resizePizzas = function(size) {
 
   var randomPizzaContainerAll = document.getElementsByClassName("randomPizzaContainer");
   // Iterates through pizza elements on the page and changes their widths
+  // Change: Take static calculations outside of the loop
   function changePizzaSizes(size) {
     var pizzaContainerLength = randomPizzaContainerAll.length;
     var dx = determineDx(randomPizzaContainerAll[0], size);
@@ -472,7 +473,9 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+// Change: Optimize pizza appending on load
 var pizzasDiv = document.getElementById("randomPizzas");
+// Change: Use requestAnimationFrame when loading and appending pizzas
 window.requestAnimationFrame(function function_name () {
   for (var i = 2; i < 100; i++) {
    pizzasDiv.appendChild(pizzaElementGenerator(i));
@@ -510,7 +513,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  //var items = document.querySelectorAll('.mover');
+  // Change: Take static calculations outside of the loop
   var ScrollPos = document.body.scrollTop / 1250;
   var sinScrollPos =  Math.sin(ScrollPos);
   var cosScrollPos = Math.cos(ScrollPos);
@@ -537,6 +540,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
+  //Change: Reduce the number of pizzas painted
   for (var i = 0; i < 30; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
